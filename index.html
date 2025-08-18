@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salary Calculator</title>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>SALARY CALCULATOR</h1>
+
+  <form id="employeeForm">
+    <input type="text" id="firstName" placeholder="First Name">
+    <input type="text" id="lastName" placeholder="Last Name">
+    <input type="number" id="idNumber" placeholder="ID Number">
+    <input type="text" id="JobTitle" placeholder="Job Title">
+    <input type="number" id="annualSalary" placeholder="Annual Salary">
+   
+    <button type="submit">Submit</button>
+  </form>
+
+  
+
+  <table id="employeeTable">
+    <caption>EMPLOYEES</caption>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>ID Number</th>
+        <th>Job Title</th>
+        <th>Annual Salary ($)</th>
+        
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Employee rows will go here -->
+    </tbody>
+  </table>
+
+  <!-- ✅ Add this to show total monthly expense -->
+  <p id="totalMonthlyExpense">Total Monthly Expense: $0.00</p>
+</body>
+</html>

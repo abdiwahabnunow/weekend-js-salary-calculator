@@ -60,6 +60,23 @@ function removeRow(button) {
 function updateTotalMonthlyExpense() {
     const monthlyExpense = (totalAnnualSalary / 12).toFixed(2);
     totalMonthlyExpenseElem.textContent = `Total Monthly Expense: $${monthlyExpense}`;
+    changeColor();
+}
+
+
+function changeColor() {
+    const element = document.getElementById("totalMonthlyExpense");
+    
+  
+    const text = element.textContent;
+    const match = text.match(/\$([0-9,.]+)/);
+    const value = match ? parseFloat(match[1].replace(/,/g, '')) : 0;
+
+    if (value > 20000) {
+        element.style.color = "red"; // Over budget
+    } else {
+        element.style.color = "green"; // Within budget
+    }
 }
 
 employeeForm.onsubmit = handleSubmitForm;
